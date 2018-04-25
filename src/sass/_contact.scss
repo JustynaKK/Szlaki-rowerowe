@@ -1,0 +1,36 @@
+//.contact {
+//
+//  .checkbox-wrapper {
+//    display: flex;
+//    margin-top: -5px;
+//    p {
+//      margin-left: 10px;
+//      margin-top: 2px;
+//    }
+//    input {
+//      margin-bottom: 10px;
+//    }
+//  }
+//  input[name="username"] {background: url("../images/user.png") no-repeat 17px, url("../images/vertical-line.png") no-repeat 58px}
+//  input[type="email"] {background: url("../images/email.png") no-repeat 17px, url("../images/vertical-line.png") no-repeat 58px}
+//  input[type="tel"] {background: url("../images/phone.png") no-repeat 21px, url("../images/vertical-line.png") no-repeat 58px}
+//
+//}
+.contact {
+
+  .checkbox-wrapper {
+    display: flex;
+    margin-top: -5px;
+    p {
+      margin-left: 10px;
+      margin-top: 2px;
+    }
+    input {
+      margin-bottom: 10px;
+    }
+  }
+  input[name="username"] {background: url("../images/user.png") no-repeat 17px, url("../images/vertical-line.png") no-repeat 58px}
+  input[type="email"] {background: url("../images/email.png") no-repeat 17px, url("../images/vertical-line.png") no-repeat 58px}
+  input[type="tel"] {background: url("../images/phone.png") no-repeat 21px, url("../images/vertical-line.png") no-repeat 58px}
+
+}

@@ -1,0 +1,34 @@
+
+@mixin images {
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 200px;
+    flex: 2;
+}
+
+
+.single {
+    width:70%;
+    height: 200px;
+    display: flex;
+    margin:0 auto;
+
+}
+
+
+.image_1 {
+    background-image: url("../images/outdoor.jpg");
+    @include images;
+}
+
+.image_2 {
+    background-image: url("../images/fot5.jpg");
+    @include images;
+}
+
+.image_3 {
+    background-image: url("../images/fot3.jpg");
+    @include images;
+
+}

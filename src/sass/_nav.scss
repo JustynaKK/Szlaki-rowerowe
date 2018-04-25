@@ -1,0 +1,163 @@
+@mixin easeOut {
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1)
+}
+
+nav {
+  position: fixed;
+  min-width: 100%;
+  height: 60px;
+  background-color: $navbar;
+  z-index: 1000;
+  color: white;
+}
+
+nav {
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 60px;
+  }
+  //
+  //a {
+  //  text-decoration: none;
+  //  color: white;
+  //}
+}
+
+.logo {
+  display: flex;
+  img {
+    width: 43px;
+    height: 40px;
+    position: absolute;
+    top: 8px;
+  }
+  h1 {
+    margin-left: 60px;
+    font-size: 1.7rem;
+    letter-spacing: 2px;
+  }
+
+  strong {
+    color: $kaczkowy;
+    font-size: inherit;
+  }
+}
+
+
+nav {
+  ul {
+    width: 60%;
+    display: flex; //to jest flex do listy
+    justify-content: space-evenly;
+    list-style-type: none;
+
+    li {
+      flex: 1 1 auto;
+      text-align: center;
+      @include easeOut;
+    }
+
+    a {
+      display: block;
+      line-height: 50px;;
+      @include easeOut;
+
+      &:hover {
+        color: $kaczkowy;
+        font-weight: bold;
+      }
+    }
+
+  }
+}
+
+//burger icon
+nav {
+  .hamburger {
+    display: none;
+    height: 30px;
+    width: 30px;
+    margin: 5px;
+    cursor: pointer;
+
+    @include easeOut;
+
+    i, i:before, i:after {
+      content: '';
+      width: 25px; height: 4px;
+      background: $kaczkowy;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: transform .2s ease;
+    }
+
+    i {
+      display: block;
+      position: relative;
+      top: 16px;
+      right: 6px;
+    }
+
+    i:before {
+      position: absolute;
+      top: -8px;
+    }
+
+    i:after {
+      position: absolute;
+      top: 8px;
+    }
+
+  }
+
+  //cross after click
+  &.active{
+    i {
+      background: transparent;
+    }
+
+    i:before {
+      top: 0;
+      transform: rotate(45deg);
+    }
+    i:after {
+      top: 0;
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    ul{
+      display: none;
+    }
+    .hamburger {
+      display: inline-block;
+    }
+  }
+
+  nav {
+    &.active .navList {
+      display: block;
+      position:absolute;
+      top:100%;
+      right:0;
+
+      li {
+        text-align:center;
+        background: $grayopacity09;
+      }
+      li:hover {
+        background: $navbar;
+      }
+    }
+
+  }
+
+
+}
+
+

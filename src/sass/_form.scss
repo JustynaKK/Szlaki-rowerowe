@@ -1,0 +1,78 @@
+form {
+  background-color: $grayopacity03;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 5px;
+
+
+  input, textarea, select {
+    width: 100%;
+    margin-bottom: 20px;
+    height: 40px;
+    padding: 0 10px 0 80px;
+    outline: none;
+    border: 1px solid $grayopacity07;
+    border-radius: 3px;
+    background-color: rgba(255, 214, 108, 0.84) !important;
+  }
+
+  select {
+    padding: 0 10px;
+    margin-bottom: 0;
+
+  }
+
+  textarea {
+    overflow: hidden;
+    resize: none;
+    height: 230px;
+    padding: 10px;
+  }
+
+  input::placeholder, textarea::placeholder {
+    color: rgb(61, 61, 61);
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+
+  }
+  input[type="checkbox"] {
+    //-webkit-appearance: none;
+    //-moz-appearance: none;
+    //appearance: none;
+    width: 22px;
+    height: 22px;
+    margin: 3px;
+    padding: 1px;
+  }
+
+  button {
+    width: 100%;
+    background-color: $navbar;
+    border-radius: 3px;
+    color: white;
+    height: 45px;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+  }
+
+  .button-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0 0;
+  }
+
+  button:hover {
+    outline: none;
+    background-color: #60862E;
+    transition: 0.1s;
+  }
+
+  button:active {
+    border: 2px solid #364212;
+  }
+
+
+}
+
+

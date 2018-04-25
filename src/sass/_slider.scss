@@ -1,0 +1,112 @@
+.sliderSection {
+  //background-color: darkgray;
+  height: 60vh;
+
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    padding: 1rem;
+  }
+}
+
+.slider {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  //background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  .strong {
+    color: white;
+    text-shadow: 0 0 5px rgb(24, 31, 24);
+    font-size: xx-large;
+  }
+
+  .circles {
+    align-self: flex-end;
+    position: relative;
+    .circle {
+      border-radius: 50%;
+      width: 10px;
+      height: 10px;
+      display: inline-block;
+      border: 1px solid white;
+      //background: white;
+      margin-left: 10px;
+    }
+  }
+
+}
+
+.random_main_page {
+  height: 100%;
+  flex:1;
+  margin-left: 20px;
+  background-color: $grayopacity09;
+  padding: 1rem;
+  color: white;
+  h3 {
+    padding-bottom: 0.8rem;
+  }
+
+  .picture {
+    margin: 0;
+    height: 40%;
+    width: 100%;
+    background-image: url("../images/outdoor.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 1px solid white;
+  }
+
+  .description {
+    color: white;
+    p {
+      text-align: center;
+      font-style: italic;
+      font-size: 0.75rem;
+      padding-top: 1.2rem;
+      opacity: 0.5;
+    }
+    ul {
+      list-style: none;
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 10px;
+      li {
+        display: flex;
+        flex-direction: column;
+        font-size: 16px;
+        span {
+          font-size: 12px;
+        }
+      }
+    }
+    h2 {
+      text-align: center;
+      font-size: 25px;
+      margin-bottom: 10px;
+      color: white;
+    }
+  }
+
+}
+
+
+@media screen and (max-width: 768px) {
+  .random_main_page {
+    display: none !important;
+
+  }
+}
