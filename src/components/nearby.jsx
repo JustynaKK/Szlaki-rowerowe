@@ -6,11 +6,11 @@ class Nearby extends React.Component {
     state = {
         text: this.props.text,
 
-    }
+    };
 
     handleCLick = () => {
         window.scrollTo(0, 1000)
-    }
+    };
 
 
 
@@ -18,7 +18,7 @@ class Nearby extends React.Component {
 
         const opis_trasy = {
             listStyle: 'none',
-        }
+        };
 
         return (
             <div className="main_nearby">

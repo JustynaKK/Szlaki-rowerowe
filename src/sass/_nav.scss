@@ -130,6 +130,13 @@ nav {
 }
 
 @media screen and (max-width: 768px) {
+  .logo {
+    h1 {
+      font-size: 1.4rem;
+
+
+    }
+  }
   nav {
     ul{
       display: none;
@@ -159,5 +166,21 @@ nav {
 
 
 }
+
+
+@media screen and (max-width: 360px) {
+  .logo {
+    img {
+      display: none;
+
+    }
+    h1 {
+      margin-left: 0;
+    }
+  }
+
+}
+
+
 
 

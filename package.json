@@ -1,16 +1,14 @@
 {
-  "name": "1_Przygotowanie_React",
+  "name": "Szlaki_rowerowe",
   "version": "1.0.0",
-  "description": "## Zadanie rozwiązywane z wykładowcą",
+  "description": "Strona poświęcona szlakom rowerowym w Polsce",
   "main": "webpack.config.js",
+  "author": "Justyna Kordiaczyńska",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "wp": "webpack",
-    "serv": "webpack-dev-server --hot"
+    "dev": "webpack-dev-server --config webpack-dev.config.js",
+    "start": "harp server ~/public --port $PORT",
+    "heroku-postbuild": "webpack --config webpack-prod.config.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "react": "^15.4.0",
     "react-dom": "^15.4.0",
@@ -24,16 +22,19 @@
     "babel-preset-es2016": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
-    "css-loader": "^0.28.11",
-    "file-loader": "^1.1.11",
+    "harp": "^0.25.0",
     "html-webpack-plugin": "^3.2.0",
     "json-server": "^0.12.1",
-    "node-sass": "^4.8.3",
+    "npm": "^5.6.0",
     "postcss-loader": "^2.1.3",
-    "sass-loader": "^6.0.7",
     "style-loader": "^0.20.3",
+    "url-loader": "^0.5.9",
+    "webpack-dev-server": "^3.1.3",
+    "css-loader": "^0.28.11",
+    "file-loader": "^1.1.11",
+    "node-sass": "^4.8.3",
+    "sass-loader": "^6.0.7",
     "webpack": "^4.5.0",
-    "webpack-cli": "^2.0.14",
-    "webpack-dev-server": "^3.1.3"
+    "webpack-cli": "^2.0.14"
   }
 }

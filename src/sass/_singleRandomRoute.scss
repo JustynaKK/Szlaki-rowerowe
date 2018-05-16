@@ -18,17 +18,17 @@
 
 
 .image_1 {
-    background-image: url("../images/outdoor.jpg");
+    background-image: url("../../images/outdoor.jpg");
     @include images;
 }
 
 .image_2 {
-    background-image: url("../images/fot5.jpg");
+    background-image: url("../../images/fot5.jpg");
     @include images;
 }
 
 .image_3 {
-    background-image: url("../images/fot3.jpg");
+    background-image: url("../../images/fot3.jpg");
     @include images;
 
 }

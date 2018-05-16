@@ -52,7 +52,7 @@ class ResultRoute extends React.Component {
     }
 
     componentDidMount() {
-        fetch(`http://localhost:3000/routes/${this.props.match.params.id}`)
+        fetch(`https://szlaki-rowerowe-api.herokuapp.com/routes/${this.props.match.params.id}`)
             .then(resp => {
                 if(resp.ok) {
                     return resp.json()

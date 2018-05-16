@@ -65,14 +65,14 @@ class Search extends React.Component {
         typeOfBike: [],
         level: [],
 
-    }
+    };
 
     handleVoivodeshipChange = (value) => {
         this.setState({
             voivodeship: value
         })
 
-    }
+    };
 
     handleLevelSelect = (value) => {
         console.log(value);
@@ -80,7 +80,7 @@ class Search extends React.Component {
             level: value
         })
 
-    }
+    };
 
 
     handleBikeTypeSelect = (value) => {
@@ -89,7 +89,7 @@ class Search extends React.Component {
             typeOfBike: value
         })
 
-    }
+    };
 
     handleMinChange = (value) => {
         console.log(value);
@@ -97,7 +97,7 @@ class Search extends React.Component {
             distanceMin: Number(value)
         })
 
-    }
+    };
 
     handleMaxChange = (value) => {
         console.log(value);
@@ -105,7 +105,7 @@ class Search extends React.Component {
             distanceMax: Number(value)
         })
 
-    }
+    };
 
 
     render() {
@@ -145,7 +145,7 @@ class Search extends React.Component {
     }
 
     componentDidMount() {
-        fetch(`http://localhost:3000/routes`)
+        fetch(`https://szlaki-rowerowe-api.herokuapp.com/routes`)
             .then(resp => {
                 if(resp.ok) {
                     return resp.json()

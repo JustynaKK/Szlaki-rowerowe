@@ -9,7 +9,7 @@ class Map extends React.Component {
     state = {
         color: "rgb(110,110,110)",
         voivodeship: ''
-    }
+    };
 
 
 //     handleClick = (e) => {
@@ -44,7 +44,7 @@ class Map extends React.Component {
             stroke: 'black',
             strokeOpacity: 1,
             strokeWidth:0.75
-        }
+        };
         return (
             <div className={'map scaling-svg-container '} style={{paddingBottom: '100%!important' }}>
                 <svg className={'scaling-svg '}

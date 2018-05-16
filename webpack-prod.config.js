@@ -1,11 +1,14 @@
-var path = require('path');
-var Html = require('html-webpack-plugin');
+const path = require('path');
+const webpack = require('webpack');
+const Html = require('html-webpack-plugin');
 
 module.exports = {
-    entry: "./src/index.jsx",
-    output: {
-        filename: "out.js",
-        path: path.resolve(__dirname, 'build')
+    entry:      "./src/index.jsx",
+    resolve: {
+        extensions: ['.webpack.js', '.web.js', '.ts', '.js', '.jsx']
+    },
+    watchOptions: {
+        poll: true
     },
     devServer: {
         inline: true,
@@ -13,8 +16,7 @@ module.exports = {
         port: 3001
     },
     mode: 'development',
-    watch: true,
-    devtool: 'source-map',
+    // devtool: 'source-map',
     module: {
         rules: [
             {
@@ -38,17 +40,19 @@ module.exports = {
             },
             {
                 test: /\.(jpg|jpeg|gif|png|csv)$/,
-                use: {
-                  loader: 'file-loader',
-                  options: {
-                    name: '[name].[ext]',
-                    publicPath: 'images',
-                    outputPath: 'images'
-                  }
-                }
+                use: [{
+                    loader: 'file-loader',
+                    options: {
+                        name: '[path][name]-[hash:8].[ext]'
+                    },
+                }, ]
               },
 
         ]
+    },
+   output: {
+        filename: 'scripts/[name]-[chunkhash:8].js',
+        path: path.resolve(__dirname, 'public')
     },
     plugins: [
         new Html({

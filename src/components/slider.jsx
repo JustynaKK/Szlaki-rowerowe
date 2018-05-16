@@ -1,9 +1,19 @@
 import React from 'react';
+import bicycling from '../../images/bicycling.jpg';
+import bike from '../../images/bike.jpg';
+import gruzja from '../../images/gruzja.jpg';
+import man from '../../images/man.jpg';
+import fot3 from '../../images/fot3.jpg';
+import fot4 from '../../images/fot4.jpg';
+import fot5 from '../../images/fot5.jpg';
+import fot6 from '../../images/fot6.jpg';
+import fot7 from '../../images/fot7.jpg';
+import fot8 from '../../images/fot8.jpg';
 
 class Slider extends React.Component {
 
     state = {
-        id: 'bicycling.jpg',
+        id: bicycling,
         photo_indeks: 0,
         name: [],
         distance: [],
@@ -29,7 +39,8 @@ class Slider extends React.Component {
 
     runSlider = (now = false) => {
 
-        const photo = ['bicycling.jpg', 'bike.jpg', 'gruzja.jpg', 'man.jpg', 'fot3.jpg', 'fot4.jpg', 'fot5.jpg', 'fot6.jpg', 'fot7.jpg', 'fot8.jpg'];
+        const photo = [bicycling, bike, gruzja, man, fot3, fot4, fot5, fot6, fot7, fot8];
+        // const photo = [bicycling, bike];
 
         if (now) {
             this.setState({
@@ -46,7 +57,7 @@ class Slider extends React.Component {
 
         }, 4000)
 
-    }
+    };
 
 
     render() {
@@ -62,7 +73,7 @@ class Slider extends React.Component {
         let level = this.state.level[this.state.random];
         let color = 'black';
 
-        let white_space = route_name.indexOf(" ");
+
 
 
         for (let i = route_name.length; i = 0; i--) {
@@ -75,47 +86,47 @@ class Slider extends React.Component {
         return (
             <div className="sliderSection">
 
-            <div className="wrapper">
+                <div className="wrapper">
 
-                <div className={'slider'} style={{
-                    backgroundImage: `url(/src/images/${this.state.id})`
-                }}>
-                    <div className="strong">Wyrusz w kaczą podróż!</div>
-                    <div className={'circles'}>
-                        <span className={'circle'} onClick={this.handleClick} style={{backgroundColor: 0 === this.state.photo_indeks ? color : 'rgba(255, 255, 255, 0.3)'}} data-id={0}></span>
-                        <span className={'circle'} onClick={this.handleClick} style={{backgroundColor: 1 === this.state.photo_indeks ? color : 'rgba(255, 255, 255, 0.3)'}} data-id={1}></span>
-                        <span className={'circle'} onClick={this.handleClick} style={{backgroundColor: 2 === this.state.photo_indeks ? color : 'rgba(255, 255, 255, 0.3)'}} data-id={2}></span>
-                        <span className={'circle'} onClick={this.handleClick} style={{backgroundColor: 3 === this.state.photo_indeks ? color : 'rgba(255, 255, 255, 0.3)'}} data-id={3}></span>
-                        <span className={'circle'} onClick={this.handleClick} style={{backgroundColor: 4 === this.state.photo_indeks ? color : 'rgba(255, 255, 255, 0.3)'}} data-id={4}></span>
-                        <span className={'circle'} onClick={this.handleClick} style={{backgroundColor: 5 === this.state.photo_indeks ? color : 'rgba(255, 255, 255, 0.3)'}} data-id={5}></span>
-                        <span className={'circle'} onClick={this.handleClick} style={{backgroundColor: 6 === this.state.photo_indeks ? color : 'rgba(255, 255, 255, 0.3)'}} data-id={6}></span>
+                    <div className={'slider'} style={{
+                        backgroundImage: `url(${this.state.id})`
+                    }}>
+                        <div className="strong">Wyrusz w kaczą podróż!</div>
+                        <div className={'circles'}>
+                            <span className={'circle'} onClick={this.handleClick} style={{backgroundColor: 0 === this.state.photo_indeks ? color : 'rgba(255, 255, 255, 0.3)'}} data-id={0}></span>
+                            <span className={'circle'} onClick={this.handleClick} style={{backgroundColor: 1 === this.state.photo_indeks ? color : 'rgba(255, 255, 255, 0.3)'}} data-id={1}></span>
+                            <span className={'circle'} onClick={this.handleClick} style={{backgroundColor: 2 === this.state.photo_indeks ? color : 'rgba(255, 255, 255, 0.3)'}} data-id={2}></span>
+                            <span className={'circle'} onClick={this.handleClick} style={{backgroundColor: 3 === this.state.photo_indeks ? color : 'rgba(255, 255, 255, 0.3)'}} data-id={3}></span>
+                            <span className={'circle'} onClick={this.handleClick} style={{backgroundColor: 4 === this.state.photo_indeks ? color : 'rgba(255, 255, 255, 0.3)'}} data-id={4}></span>
+                            <span className={'circle'} onClick={this.handleClick} style={{backgroundColor: 5 === this.state.photo_indeks ? color : 'rgba(255, 255, 255, 0.3)'}} data-id={5}></span>
+                            <span className={'circle'} onClick={this.handleClick} style={{backgroundColor: 6 === this.state.photo_indeks ? color : 'rgba(255, 255, 255, 0.3)'}} data-id={6}></span>
 
+                        </div>
                     </div>
+
+                    <div className="random_main_page">
+                        <h3>Trasa na dziś:</h3>
+                        <div className="picture"></div>
+                        <div className="description">
+                            <h2>{route_name}</h2>
+                            <ul>
+                                <li><span>Start:</span> {start}</li>
+                                <li><span>Dystans:</span> {distance}km</li>
+                                <li><span>Poziom:</span> {level}</li>
+                            </ul>
+                            <hr/>
+                            <p>Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non
+                                felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et
+                                ligula...</p>
+
+                        </div>
+                        {/*<button>Zobacz więcej propozycji</button>*/}
+                    </div>
+
+
                 </div>
 
-                <div className="random_main_page">
-                    <h3>Trasa na dziś:</h3>
-                    <div className="picture"></div>
-                    <div className="description">
-                        <h2>{route_name}</h2>
-                        <ul>
-                            <li><span>Start:</span> {start}</li>
-                            <li><span>Dystans:</span> {distance}km</li>
-                            <li><span>Poziom:</span> {level}</li>
-                        </ul>
-                        <hr/>
-                        <p>Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non
-                            felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et
-                            ligula...</p>
-
-                    </div>
-                    {/*<button>Zobacz więcej propozycji</button>*/}
-                </div>
-
-
-            </div>
-
-        </div>)
+            </div>)
     }
 
     componentDidMount() {
@@ -123,7 +134,7 @@ class Slider extends React.Component {
         this.runSlider();
 
 
-        fetch(`http://localhost:3000/routes/`)
+        fetch(`https://szlaki-rowerowe-api.herokuapp.com/routes`)
             .then(resp => {
                 if (resp.ok) {
                     return resp.json()
@@ -139,10 +150,10 @@ class Slider extends React.Component {
 
                 for (let i = 0; i < data.length; i++) {
 
-                    tab.push(data[i].name)
-                    tab2.push(data[i].distance)
-                    tab3.push(data[i].location)
-                    tab4.push(data[i].level)
+                    tab.push(data[i].name);
+                    tab2.push(data[i].distance);
+                    tab3.push(data[i].location);
+                    tab4.push(data[i].level);
                 }
                 this.setState({
                     name: tab,
@@ -162,4 +173,3 @@ class Slider extends React.Component {
 }
 
 export default Slider;
-

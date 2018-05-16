@@ -1,13 +1,13 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-
+import kaczka from '../../images/Kaczka_01.png';
 
 class Nav extends React.Component {
 
     toggleSideNav = () => {
         const nav = document.querySelector('nav');
         console.log(nav.classList.toggle('active'))
-    }
+    };
 
     render() {
         return (
@@ -15,8 +15,8 @@ class Nav extends React.Component {
                 <div className="wrapper">
                     <NavLink exact to='/'>
                         <div className={'logo'}>
-                            <img src="/src/images/Kaczka_01.png" alt=""/>
-                            <h1><strong>K</strong>acze <strong>t</strong>rasy</h1>
+                            <img src={kaczka} alt=""/>
+                            <h1><strong>S</strong>zlaki <strong>r</strong>owerowe</h1>
                         </div>
                     </NavLink>
 

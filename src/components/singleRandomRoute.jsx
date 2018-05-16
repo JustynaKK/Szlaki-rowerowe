@@ -35,7 +35,7 @@ class SingleRandomRoute extends React.Component {
     }
 
     componentDidMount () {
-        fetch(`http://localhost:3000/routes/`)
+        fetch(`https://szlaki-rowerowe-api.herokuapp.com/routes`)
        .then(resp => {
            if(resp.ok) {
                return resp.json()
