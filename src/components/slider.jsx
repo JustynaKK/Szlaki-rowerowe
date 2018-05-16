@@ -91,7 +91,7 @@ class Slider extends React.Component {
                     <div className={'slider'} style={{
                         backgroundImage: `url(${this.state.id})`
                     }}>
-                        <div className="strong">Wyrusz w kaczą podróż!</div>
+                        <div className="strong">Wyrusz z nami w podróż!</div>
                         <div className={'circles'}>
                             <span className={'circle'} onClick={this.handleClick} style={{backgroundColor: 0 === this.state.photo_indeks ? color : 'rgba(255, 255, 255, 0.3)'}} data-id={0}></span>
                             <span className={'circle'} onClick={this.handleClick} style={{backgroundColor: 1 === this.state.photo_indeks ? color : 'rgba(255, 255, 255, 0.3)'}} data-id={1}></span>
