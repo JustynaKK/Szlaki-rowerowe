@@ -77,7 +77,7 @@ import ReactDOM from 'react-dom';
                     <div >
                         <p><strong>{week[this.state.current_weekday]}, {this.state.current_time}</strong></p>
                         <p>{this.state.current_day}</p>
-                        <p className="iconka"><img src={`http://openweathermap.org/img/w/${icon}.png`}/> <span className="temp">{Math.floor(current_weather-273.15)} &#186; C</span></p>
+                        <p className="iconka"><img src={`https://openweathermap.org/img/w/${icon}.png`}/> <span className="temp">{Math.floor(current_weather-273.15)} &#186; C</span></p>
                     </div>
                     <ul className="small_data">
                         <li><strong>Wilgotność:</strong> {humidity}%</li>
@@ -90,11 +90,11 @@ import ReactDOM from 'react-dom';
                 <div className="hover">
                     <hr/>
                  <ul className="next_days">
-                    <li >{week[this.generateNextDay(1)].slice(0,3)}.<p>{Math.floor(this.generateNextDayTemp(7)-273.15)} &#186; C</p><img src={`http://openweathermap.org/img/w/${this.generateIconForNextDay(15)}.png`}/></li>
-                     <li>{week[this.generateNextDay(2)].slice(0,3)}.<p>{Math.floor(this.generateNextDayTemp(15)-273.15)} &#186; C</p><img src={`http://openweathermap.org/img/w/${this.generateIconForNextDay(15)}.png`}/></li>
-                     <li>{week[this.generateNextDay(3)].slice(0,3)}.<p>{Math.floor(this.generateNextDayTemp(23)-273.15)} &#186; C</p><img src={`http://openweathermap.org/img/w/${this.generateIconForNextDay(23)}.png`}/></li>
-                     <li>{week[this.generateNextDay(4)].slice(0,3)}.<p>{Math.floor(this.generateNextDayTemp(31)-273.15)} &#186; C</p><img src={`http://openweathermap.org/img/w/${this.generateIconForNextDay(31)}.png`}/></li>
-                     <li>{week[this.generateNextDay(5)].slice(0,3)}.<p>{Math.floor(this.generateNextDayTemp(39)-273.15)} &#186; C</p><img src={`http://openweathermap.org/img/w/${this.generateIconForNextDay(39)}.png`}/></li>
+                    <li >{week[this.generateNextDay(1)].slice(0,3)}.<p>{Math.floor(this.generateNextDayTemp(7)-273.15)} &#186; C</p><img src={`https://openweathermap.org/img/w/${this.generateIconForNextDay(15)}.png`}/></li>
+                     <li>{week[this.generateNextDay(2)].slice(0,3)}.<p>{Math.floor(this.generateNextDayTemp(15)-273.15)} &#186; C</p><img src={`https://openweathermap.org/img/w/${this.generateIconForNextDay(15)}.png`}/></li>
+                     <li>{week[this.generateNextDay(3)].slice(0,3)}.<p>{Math.floor(this.generateNextDayTemp(23)-273.15)} &#186; C</p><img src={`https://openweathermap.org/img/w/${this.generateIconForNextDay(23)}.png`}/></li>
+                     <li>{week[this.generateNextDay(4)].slice(0,3)}.<p>{Math.floor(this.generateNextDayTemp(31)-273.15)} &#186; C</p><img src={`https://openweathermap.org/img/w/${this.generateIconForNextDay(31)}.png`}/></li>
+                     <li>{week[this.generateNextDay(5)].slice(0,3)}.<p>{Math.floor(this.generateNextDayTemp(39)-273.15)} &#186; C</p><img src={`https://openweathermap.org/img/w/${this.generateIconForNextDay(39)}.png`}/></li>
                  </ul>
                 </div>
             </section>
@@ -104,7 +104,7 @@ import ReactDOM from 'react-dom';
     }
 
     componentDidMount () {
-        fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${this.state.city}&APPID=e1581388278693874a8e19ab2f5159bd`)
+        fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${this.state.city}&APPID=e1581388278693874a8e19ab2f5159bd`)
         .then(resp => {
             if(resp.ok) {
                 return resp.json()
